@@ -1,6 +1,29 @@
+import transport.*;
+
 public class Main {
     public static void main(String[] args) {
+        Car car = new Car("carl");
+        Car car2 = new Car("car2");
 
-        System.out.println("Hello world!");
+        Truck truck = new Truck("trucki");
+        Truck truck2 = new Truck("truck2", 8);
+
+        Bicycle bicycle = new Bicycle("bicycle1");
+        Bicycle bicycle2 = new Bicycle("bicycle2");
+
+        Transport[] transports = {
+                car,
+                car2,
+                truck,
+                truck2,
+                bicycle,
+                bicycle2,
+        };
+
+        ServiceStation station = new ServiceStation();
+
+        for (Transport transport : transports) {
+            station.check(transport);
+        }
     }
 }
